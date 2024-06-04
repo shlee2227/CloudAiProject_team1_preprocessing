@@ -162,9 +162,12 @@ cython_debug/
 #.idea/
 
 
-ref/Casting_data_goai4th-6
-ref/datasets
+model_learning_ref/Casting_data_goai4th-6
+model_learning_ref/datasets
+model_learning_ref/runs
 /detect
 
 convert
 convert/
+
+JavaClient.java
