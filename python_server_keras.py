@@ -1,4 +1,3 @@
-from cv2 import threshold
 from flask import Flask, request, jsonify
 import requests
 from io import BytesIO
@@ -8,7 +7,7 @@ import tensorflow as tf
 app = Flask(__name__)
 
 model = tf.keras.applications.resnet50.ResNet50(weights='imagenet')
-treshold = 0.01
+threshold = 0.01
 
 def preprocess_image(image):
   image = image.resize((224, 224))
@@ -22,7 +21,7 @@ def filtered_predictions(predictions):
   # prediction decoding, reformating, filtering
   decoded_predictions = tf.keras.applications.resnet50.decode_predictions(predictions, top=10)[0]
   formated_predictions = [{"label": label, "score": float(score)} for _, label, score in decoded_predictions]
-  filtered_predictions = [pred for pred in formated_predictions if pred["score"] >= treshold]
+  filtered_predictions = [pred for pred in formated_predictions if pred["score"] >= threshold]
 
   # result 기본 snippet
   result = {"classification_number" : len(filtered_predictions), # 섞인 종 갯수
