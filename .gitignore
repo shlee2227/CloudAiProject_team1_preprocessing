@@ -171,3 +171,8 @@ convert
 convert/
 
 JavaClient.java
+
+# setting file
+.vscode/
+.vscode
+

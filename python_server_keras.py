@@ -25,7 +25,7 @@ def filtered_predictions(predictions):
 
   # result 기본 snippet
   result = {"classification_number" : len(filtered_predictions), # 섞인 종 갯수
-            "Information" : "양육정보 추가예정"} # 양육정보 
+            "Information" : "양육정보를 추가해주세요!"} # 양육정보 
   
   # result에 rkr prediction 아이템 추가 
   for idx, prediction_item in enumerate(filtered_predictions):
@@ -62,3 +62,5 @@ def predict():
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=5500, debug=True)
+
+
