@@ -161,10 +161,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-
-model_learning_ref/Casting_data_goai4th-6
-model_learning_ref/datasets
-model_learning_ref/runs
+ref/Casting_data_goai4th-6
+ref/datasets
+ref/runs
+ref/test_for_castingset
 /detect
 
 convert
