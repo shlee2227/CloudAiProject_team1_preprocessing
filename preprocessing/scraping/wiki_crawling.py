@@ -4,11 +4,11 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import pandas as pd
-import openpyxl
+# import openpyxl
 import requests
 from PIL import Image
 from io import BytesIO
-from openpyxl.drawing.image import Image as ExcelImage
+# from openpyxl.drawing.image import Image as ExcelImage
 
 # WebDriver 초기화
 options = webdriver.ChromeOptions()
@@ -22,7 +22,11 @@ driver.implicitly_wait(3)
 # 함수
 def get_movie_info(data):
   boxoffice_list_content = driver.find_element(By.ID, "boxoffice_list_content")
+  print(type(boxoffice_list_content))
+  print(boxoffice_list_content)
   boxoffice_li = boxoffice_list_content.find_elements(By.CLASS_NAME, "boxoffice_li")
+  print(type(boxoffice_li))
+  print(boxoffice_li)
   for li in boxoffice_li:
     rank = li.find_element(By.CLASS_NAME, "grade").text
 
